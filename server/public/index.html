@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claire's Calc</title>
+    <script src="vendors/jquery-3.6.0.min.js"></script>
+    <script src="scripts/client.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <h1>Claire's Calculator</h1>
+    <div>
+        <p type="number" id="displayedInput"></p>
+    </div>
+
+
+    <table id="calcTable">
+        <tr>
+            <th><button class="firstNumButton" id="seven" value="7">7</button></th>
+            <th><button class="firstNumButton" value="8">8</button></th>
+            <th><button class="firstNumButton" value="9">9</button></th>
+            <th><button class="operationButton" data-id="divideButton" value="/">/</button></th>
+        </tr>
+        <tr>
+            <td><button class="firstNumButton" value="4">4</button></td>
+            <td><button class="firstNumButton" value="5">5</button></td>
+            <td><button class="firstNumButton" value="6">6</button></td>
+            <th><button class="operationButton" data-id="addButton" value="+">+</button></th>
+        </tr>
+        <tr>
+            <td><button class="firstNumButton" value="1">1</button></td>
+            <td><button class="firstNumButton" value="2">2</button></td>
+            <td><button class="firstNumButton" value="3">3</button></td>
+            <th><button class="operationButton" data-id="minusButton" value="-">-</button></th>
+        </tr>
+        <tr>
+            <td><button class="firstNumButton" value="0">0</button></td>
+            <td><button class="firstNumButton" value="." id="dot">.</button></td>
+            <td><button id="clearButton">C</button></td>
+
+            <td><button class="operationButton" data-id="multiplyButton" value="*">*</button></td>
+        </tr>
+        <tr>
+            <td> <button id="equalsButton">=</button></td>
+        </tr>
+
+    </table>
+
+
+
+
+
+
+
+    <div id="mathOutput"></div>
+</body>
+
+</html>

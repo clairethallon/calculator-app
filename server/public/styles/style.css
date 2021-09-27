@@ -1,0 +1,17 @@
+body{
+    background-color: azure;
+    font-family: 'Courier New', Courier, monospace;
+}
+.on{
+    border-radius: 4px;
+    background-color: rgb(255, 226, 189);
+}
+.firstNumButton{
+    border-radius: 50px;
+}
+
+.secondNumButton{
+    border-radius: 50px;
+    background-color: rgb(235, 255, 189);
+    
+}
