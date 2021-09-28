@@ -3,10 +3,10 @@ $(document).ready(onReady);
 function onReady() {
     console.log('in onReady');
 
-    $(`.firstNumButton`).on('click', assignFirstNum);
-    $(`#calcTable`).on('click', `.secondNumButton`, assignSecondNum);
-    $(`#equalsButton`).on('click', addMath);
+    getMath();
 
+    $(`.firstNumButton`).on('click', assignFirstNum);
+    $(`#equalsButton`).on('click', addMath);
     $(`#clearButton`).on('click', clearInput);
     $(`.operationButton`).on('click', assignOperator);
     $(`.on`).on('click', assignOperator);
@@ -15,25 +15,28 @@ function onReady() {
 let firstnum = '';
 let secondnum = '';
 let operatorAssigned = '';
-let dotCount = 0;
+
 
 
 function inputNumberDisplay() {
+
     $(`#displayedInput`).empty();
-    $(`#displayedInput`).append(`<p>${firstnum} ${operatorAssigned} ${secondnum} </p>`)
+    $(`#displayedInput`).append(`${firstnum} ${operatorAssigned} ${secondnum}`)
 }
 
 function assignFirstNum() {
     if (operatorAssigned != '') {
+        assignSecondNum(($(this).val()));
         return false;
     }
+
     console.log('in assignfirstNum');
     firstnum += ($(this).val());
     inputNumberDisplay();
 }
-function assignSecondNum() {
+function assignSecondNum(input) {
     console.log('in assignSecondNum');
-    secondnum += ($(this).val());
+    secondnum += input;
     inputNumberDisplay();
 }
 
@@ -48,13 +51,6 @@ function assignOperator() {
     operatorAssigned = $(this).val();
     console.log(operatorAssigned);
     $(this).toggleClass("on");
-
-
-    $('.firstNumButton').addClass("secondNumButton");
-    let thusButton = $('.firstNumButton');
-    thusButton.removeClass("firstNumButton");
-
-
     inputNumberDisplay();
 }
 
